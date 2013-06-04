@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Cookie Manager</title>
+<script src="jquery.min.js"></script>
+<script src="publicsuffix.js"></script>
+<script src="options.js"></script>
+<script src="blacklist.js"></script>
+<link rel="stylesheet" href="options.css">
+<link rel="icon" href="cookie.png">
+</head>
+<body>
+
+<div class="column" id="domains">
+    <h1>Domains</h1>
+    <select id="domains-list" size="2" tabindex="100"></select>
+    <div class="actions">
+        <button id="domains-reload" accesskey="r">Reload</button>
+    </div>
+</div>
+
+<div class="column" id="cookies">
+    <h1>Cookies</h1>
+    <select id="cookies-list" size="2" multiple tabindex="200"></select>
+    <div class="actions">
+        <button id="cookie-delete">Delete</button>
+    </div>
+</div>
+
+<div class="column" id="editcookie">
+    <h1>Edit Cookie</h1>
+    <div id="cookieform">
+        <label><span>Name:</span> <input name="name" tabindex="300"></label>
+        <label><span>Value:</span> <input name="value" tabindex="301"></label>
+        <label><span>Domain:</span> <input name="domain" tabindex="302"></label>
+        <label><span>Path:</span> <input name="path" tabindex="303"></label>
+        <label><span>Secure:</span> <input name="secure" type="checkbox" tabindex="304"></label>
+        <label><span>HttpOnly:</span> <input name="httpOnly" type="checkbox" tabindex="305"></label>
+        <label><span>HostOnly:</span> <input name="hostOnly" type="checkbox" tabindex="306"></label>
+        <label><span>Session:</span> <input name="session" type="checkbox" tabindex="307"></label>
+        <label><span>Expire:</span> <input name="expire" tabindex="308"></label>
+        <div class="actions">
+            <button id="cookie-revert" tabindex="351">Revert</button>
+            <button id="cookie-save" tabindex="350">Save</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <h1>Tools</h1>
+    <div class="actions">
+        <button id="cookie-clear">Clear Tracking Cookies</button>
+    </div>
+</div>
+
+</body>
+</html>
